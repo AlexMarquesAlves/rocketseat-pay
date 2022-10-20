@@ -1,3 +1,4 @@
+// Aula 01
 export const ccBgColor01 = document.querySelector(".cc-bg svg > g g:nth-child(1) path");
 export const ccBgColor02 = document.querySelector(".cc-bg svg > g g:nth-child(2) path");
 export const ccLogo = document.querySelector(".cc-logo span:nth-child(2) img");
@@ -15,4 +16,4 @@ export function setCardType(type: string) {
   ccLogo?.setAttribute("src", `cc-${type}.svg`);
 }
 
-globalThis.setCardType = setCardType;
+// globalThis.setCardType = setCardType;
