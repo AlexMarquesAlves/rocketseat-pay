@@ -3,15 +3,15 @@ import { cardNumberMasked, expirationDateMasked, securityCodeMasked } from "./fo
 import { setCardType } from "./setCardType";
 
 export const addButton = document.querySelector("#add-card");
-export const cardHolder = document.querySelector("#card-holder");
+export const cardHolder: any = document.querySelector("#card-holder");
 document.querySelector("form")?.addEventListener("submit", (event) => event.preventDefault());
 
 addButton?.addEventListener("click", () => {
   alert("Cartão adicionado!");
 });
 
-cardHolder?.addEventListener("input", () => {
-  const ccHolder: any = document.querySelector(".cc-holder > .value");
+cardHolder.addEventListener("input", () => {
+  const ccHolder: any = document.querySelector(".cc-holder .value");
 
   ccHolder.innerHTML = cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value;
 });
